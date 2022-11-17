@@ -16,7 +16,9 @@ const downloadData = async (url)=>{
         let artistImage = track.artist.picture
         let albumName = track.album.title
         let albumImage = track.album.cover
-        let card = new Track(title, artistName, artistImage, albumName, albumImage);
+        let link = track.link
+        console.log(link)
+        let card = new Track(title, artistName, artistImage, albumName, albumImage, link);
         card.render(results);
     });
 
